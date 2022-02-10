@@ -1,3 +1,13 @@
+terraform {
+  required_providers {
+    helm = {
+      source = "hashicorp/helm"
+      version = "2.4.1"
+    }
+  }
+}
+
+
 provider "helm" {
   kubernetes {
     host                   = data.aws_eks_cluster.dev-cluster.endpoint
